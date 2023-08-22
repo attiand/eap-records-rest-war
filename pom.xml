@@ -6,12 +6,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <parent>
-        <groupId>se.uhr.nya</groupId>
-        <artifactId>nya.super.pom</artifactId>
-        <version>1.23</version>
-    </parent>
-
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -70,9 +64,14 @@
 
     <repositories>
         <repository>
-            <id>project-nya</id>
-            <name>ITS Project repository for NyA</name>
-            <url>https://nya-artefact.its.umu.se/super-pom</url>
+            <id>jboss-ga-repository</id>
+            <url>https://maven.repository.redhat.com/ga/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
     </repositories>
 </project>
