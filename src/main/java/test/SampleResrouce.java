@@ -1,16 +1,16 @@
 package test;
 
-import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import jakarta.json.bind.Jsonb;
+import jakarta.json.bind.JsonbBuilder;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 @Produces({ MediaType.APPLICATION_JSON })
 @Consumes({ MediaType.APPLICATION_JSON })
@@ -27,7 +27,6 @@ public class SampleResrouce {
 		return Response.ok(representation).build();
 	}
 
-
 	@GET
 	@Path("record")
 	public Response getRecord() throws Exception {
@@ -42,7 +41,7 @@ public class SampleResrouce {
 		LOG.info("GET record");
 		var representation = new RecordRepresentation("Hello");
 
-		try(Jsonb jsonb = JsonbBuilder.create()) {
+		try (Jsonb jsonb = JsonbBuilder.create()) {
 			String result = jsonb.toJson(representation);
 			LOG.info(result);
 

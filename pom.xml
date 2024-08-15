@@ -12,15 +12,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <version.jboss-eap-javaee8>7.4.12.GA</version.jboss-eap-javaee8>
+        <version.jboss-eap-ee>8.0.2.GA-redhat-00008</version.jboss-eap-ee>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.jboss.bom</groupId>
-                <artifactId>jboss-eap-jakartaee8</artifactId>
-                <version>${version.jboss-eap-javaee8}</version>
+                <artifactId>jboss-eap-ee</artifactId>
+                <version>${version.jboss-eap-ee}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -29,8 +29,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.jboss.spec.javax.ws.rs</groupId>
-            <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
             <scope>provided</scope>
         </dependency>
 
