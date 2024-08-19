@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <version.jboss-eap-ee>8.0.2.GA-redhat-00008</version.jboss-eap-ee>
+        <version.jboss-eap-ee>8.0.3.GA-redhat-00006</version.jboss-eap-ee>
     </properties>
 
     <dependencyManagement>
